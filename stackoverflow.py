@@ -5,7 +5,6 @@ import requests
 import html5lib
 import sys
 from html5lib import treebuilders
-parser = html5lib.HTMLParser(tree=treebuilders.getTreeBuilder("lxml"))
 
 
 def google_search(query):
@@ -30,6 +29,7 @@ def google_search(query):
     return results
 
 
+parser = html5lib.HTMLParser(tree=treebuilders.getTreeBuilder("lxml"))
 query = 'stackoverflow ' + ' '.join(sys.argv[1:])
 answer_xpath = ('.//{http://www.w3.org/1999/xhtml}div[@class="answer"]//'
                 '{http://www.w3.org/1999/xhtml}div[@class="post-text"]')
