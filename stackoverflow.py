@@ -37,7 +37,7 @@ stack_overflow_urls = google_search(query)
 if isinstance(stack_overflow_urls, str):
     print(stack_overflow_urls)
     sys.exit(1)
-print(stack_overflow_urls[0])
+print("\n".join(stack_overflow_urls[:3]))
 stack_overflow_html = requests.get(stack_overflow_urls[0]).text
 stack_overflow_dom = parser.parse(stack_overflow_html)
 stack_overflow_answers = stack_overflow_dom.findall(answer_xpath)
