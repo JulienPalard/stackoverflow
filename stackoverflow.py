@@ -40,5 +40,6 @@ if isinstance(stack_overflow_urls, str):
 print(stack_overflow_urls[0])
 stack_overflow_html = requests.get(stack_overflow_urls[0]).text
 stack_overflow_dom = parser.parse(stack_overflow_html)
-first_answer = stack_overflow_dom.findall(answer_xpath)[0]
-print(''.join([txt for txt in first_answer.itertext()]))
+stack_overflow_answers = stack_overflow_dom.findall(answer_xpath)
+if len(stack_overflow_answers) > 0:
+    print(''.join([txt for txt in stack_overflow_answers[0].itertext()]))
