@@ -29,6 +29,10 @@ def google_search(query):
     return results
 
 
+if len(sys.argv) < 2:
+    print("Usage: {0} your query".format(sys.argv[0]), file=sys.stderr)
+    sys.exit(1)
+
 parser = html5lib.HTMLParser(tree=treebuilders.getTreeBuilder("lxml"))
 query = 'stackoverflow ' + ' '.join(sys.argv[1:])
 answer_xpath = ('.//{http://www.w3.org/1999/xhtml}div[@class="answer"]//'
