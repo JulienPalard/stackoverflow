@@ -34,7 +34,7 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 parser = html5lib.HTMLParser(tree=treebuilders.getTreeBuilder("lxml"))
-query = 'site:www.stackoverflow.com ' + ' '.join(sys.argv[1:])
+query = 'www.stackoverflow.com ' + ' '.join(sys.argv[1:])
 answer_xpath = ('.//{http://www.w3.org/1999/xhtml}div[@class="answer"]//'
                 '{http://www.w3.org/1999/xhtml}div[@class="post-text"]')
 stack_overflow_urls = google_search(query)
