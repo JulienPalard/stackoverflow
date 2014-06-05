@@ -5,8 +5,8 @@ stackoverflow.py
 stackoverflow.py is a simple command line script to fetch the first
 answer from the first stackoverflow page found for a given query.
 
-Exemple::
-    $ stackoverflow.py python get machine hostname
+Example::
+    $ ./stackoverflow.py python get machine hostname
     http://stackoverflow.com/questions/8263192/python-on-linux-get-host-name-in-etc-hostname
     http://stackoverflow.com/questions/4271740/how-can-i-use-python-to-get-the-system-hostname
     http://stackoverflow.com/questions/166506/finding-local-ip-addresses-using-pythons-stdlib
